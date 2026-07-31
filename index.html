@@ -350,7 +350,7 @@
 
         // --- 2. Mega Confetti Blast (Surprise Spread) ---
         function fireMegaConfetti() {
-            var duration = 3000; // 3 seconds tak lagatar footega
+            var duration = 1200; // 3 seconds tak lagatar footega
             var end = Date.now() + duration;
 
             (function frame() {
@@ -420,12 +420,13 @@
             heart.classList.add('falling-heart');
             const hearts = ['❤️', '💖', '💕', '🌸', '✨'];
             heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.fontSize = (16 + Math.random() * 12) + "px";
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.animationDuration = Math.random() * 3 + 2 + 's';
             document.body.appendChild(heart);
-            setTimeout(() => { heart.remove(); }, 5000);
+            setTimeout(() => { heart.remove(); }, 3000);
         }
-        setInterval(createHeart, 300);
+        setInterval(createHeart, 700);
     </script>
 </body>
 </html>
